@@ -97,6 +97,7 @@ nav li a {
     display: block;
     font-size: 1.5rem;
     padding: 1rem;
+    margin-top: 4rem;
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
@@ -218,11 +219,27 @@ h3 {
     font-size: 1em;
 }
 
+#innovate h2 + p {
+    max-width: 400px;
+    padding: 1rem;
+}
+
 #innovate div > a {
     color: var(--white);
     text-decoration: none;
 }
 
+
+h1, #innovate h2, #innovate > div > div, #services > div > div > h3, #results > h2, #results h3 {
+    animation: slide 1s linear;
+}
+
+
+
+@keyframes slide {
+    0%   { transform: translate(0, -30px); } 
+   100% { transform: translate(0px) }
+}
 #innovate div {
     margin: 0 auto;
 }
@@ -233,7 +250,7 @@ form p:nth-child(6) input {
 /* ~~~~request consult button~~~~ */
 #innovate > div > div {
     background-color: var(--blue);
-    padding: 10px;
+    padding: 1rem;
     border-radius: 8px;
     width: 50%;
     transition: all 1s ease-in-out;
@@ -256,6 +273,8 @@ footer address p a {
 
 footer {
     text-align: center;
+    line-height: 2;
+    padding: 1rem;
 }
 
 #about, #services {
@@ -264,6 +283,7 @@ footer {
 
 #results {
     background-color: var(--blue);
+    padding: 2rem;
 }
 
 #contact, footer, header {
@@ -278,7 +298,7 @@ footer {
 #services div > div {
     background-color: var(--blue);
     border-radius: 8px;
-    padding: 10px;
+    padding: 1rem;
     color: var(--white);
     transition: all 1s ease-in-out;
 }
@@ -307,7 +327,7 @@ th {
     font-weight: bold;
     border: 0.25px solid var(--charcoal);
     text-align: center;
-    padding: 10px;
+    padding: 1rem;
 
 }
 
@@ -315,7 +335,7 @@ td {
     border: 0.25px solid var(--charcoal);
     text-align: center;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 1rem;
 }
 
 table tr:nth-child(odd) td {
@@ -328,15 +348,15 @@ form {
 
 section {
     margin-top: 5px;
-    padding: 10px;
+    padding: 1rem;
 }
 
 h3 {
-    padding: 10px 0;
+    padding: 1rem 0;
 }
 
 h2 {
-    padding: 10px;
+    padding: 1rem;
 }
 
 /* ~~~~form styling~~~~~ */
@@ -358,8 +378,8 @@ label {
 input[type=text], input[type=email], select {
     box-sizing: border-box;
     width: 350px;
-    padding: 10px;
-    border: 1px solid var(--blue);
+    padding: 1rem;
+    border: 2px solid var(--blue);
 
 }
 
@@ -376,7 +396,7 @@ input[type=submit] {
     width: 350px;
     background-color: var(--blue);
     color: var(--white);
-    padding: 20px;
+    padding: 2rem;
     margin: 10px 0;
     border: none;
     cursor: pointer;
@@ -416,16 +436,25 @@ input[type=submit]:hover {
     overflow: hidden;
 }
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1 fix thissssssssssss improving text input fields????!!!*/
- h1 {
+/* ADD FLOATING SVG LOGO BEFORE THE H1 */
+ h1::before {
     content: "";
-
     left:-.5rem;
     width: 3.75rem;
-    height: 3.75rem;
+    height: 3rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
     padding-left: 100px;
+    /* border: solid 1px red; */
+    padding-top: 20px;
+    position: absolute;
 
+}
+
+h1 {
+    padding-left: 7rem;
+    background-color: var(--black);
+    position: relative;
+    padding-top: 2rem;
 }
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
