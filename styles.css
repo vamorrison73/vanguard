@@ -73,7 +73,7 @@ body {
     line-height: 1.5rem;
 }
 
-/* ~~~~~~~~~NAV STYLING~~~~~~~ */
+/* ~~~~~~~~~NAV STYLING~~~~~~~ and HAMBURGURR */
 nav {
     background-color: var(--black);
 }
@@ -155,13 +155,6 @@ input:checked ~ label span {
     background: transparent;
 }
 
-input:checked ~ label span:before {
-    transform: rotate(-45deg);
-}
-
-input:checked ~ label span:after {
-    transform: rotate(45deg);
-}
 
 input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
@@ -188,7 +181,10 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 
 
 
-
+header {
+    box-shadow: #007BFF 0 5px 5px 2px;
+    z-index: 2;
+}
 
 
 h1 {
@@ -198,15 +194,15 @@ h1 {
 }
 
 /* white headings~~~~~~ */
-#innovate > h2, #results > h2, #contact> h2 {
+#innovate h2, #results > h2, #contact> h2 {
     color: var(--white);
     font-size: 1.75em;
     font-weight: bold;
 }
 
 h3 {
-    color: pink;
-    font-size: 1.25em;
+    color: var(--white);
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -218,7 +214,7 @@ h3 {
 }
 
 #innovate h2 + p, #results h2 + p, #contact h2 + p {
-    color: pink;
+    color: var(--white);
     font-size: 1em;
 }
 
@@ -227,23 +223,30 @@ h3 {
     text-decoration: none;
 }
 
+#innovate div {
+    margin: 0 auto;
+}
 form p:nth-child(6) input {
     
 }
 
 /* ~~~~request consult button~~~~ */
-#innovate > div {
+#innovate > div > div {
     background-color: var(--blue);
     padding: 10px;
     border-radius: 8px;
+    width: 50%;
+    transition: all 1s ease-in-out;
+
 }
 
-#innovate > div:hover {
+#innovate > div > div:hover {
     background-color: var(--red);
+    transform: scale(1.1);
 }
 
 footer p {
-    color: pink;
+    color: var(--white);
 }
 
 footer address p a {
@@ -270,16 +273,18 @@ footer {
 /* ~~~~~~services/what we offer boxes~~~~~ */
 #services > div {
     display: grid;
-    gap: 10px;
+    gap: 15px;
 }
 #services div > div {
     background-color: var(--blue);
     border-radius: 8px;
     padding: 10px;
     color: var(--white);
+    transition: all 1s ease-in-out;
 }
 
 #services div > div:hover {
+    transform: translate(0, -10px);
 
 }
 
@@ -322,7 +327,7 @@ form {
 }
 
 section {
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 10px;
 }
 
@@ -377,13 +382,14 @@ input[type=submit] {
     cursor: pointer;
     font-size: 1.25em;
     border-radius: 8px;
+    transition: all 1s ease-in-out;
+
 }
 input[type=submit]:hover {
-    /* put hover effect here!!!!! */
     background-color: var(--red);
+    transform: scale(1.1);
+
 }
-
-
 
 
 
