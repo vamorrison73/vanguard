@@ -375,7 +375,7 @@ label {
     margin-top: 10px;
 }
 
-input[type=text], input[type=email], select {
+input[type=text], input[type=email], select, textarea {
     box-sizing: border-box;
     width: 350px;
     padding: 1rem;
